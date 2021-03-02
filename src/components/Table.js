@@ -92,16 +92,17 @@ export default function BasicTable() {
         <TableBody>
           {rows.map((row) => (
             <TableRow key={row.id}>
-              <TableCell>{row[location[0].id]}</TableCell>
-              <TableCell>{row[location[1].id]}</TableCell>
+              {location.map((loc) => (
+                <TableCell>{row[loc.id]}</TableCell>
+              ))}
               <TableCell>{row.categoryDescription}</TableCell>
               <TableCell>{row.productDescription}</TableCell>
               <TableCell>{row.totalStock}</TableCell>
               <TableCell>{row.percent} %</TableCell>
               <TableCell>{row.qty}</TableCell>
-              <TableCell>{row[proformaInfoId[0]]}</TableCell>
-              <TableCell>{row[proformaInfoId[1]]}</TableCell>
-              <TableCell>{row[proformaInfoId[2]]}</TableCell>
+              {proformaInfoId.map((pro) => (
+                <TableCell>{row[pro]}</TableCell>
+              ))}
             </TableRow>
           ))}
         </TableBody>
