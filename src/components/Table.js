@@ -16,26 +16,6 @@ const useStyles = makeStyles({
   },
 });
 
-function createData(
-  location,
-  category,
-  product,
-  totalStock,
-  percent,
-  totalOrder,
-  items
-) {
-  return {
-    location,
-    category,
-    product,
-    totalStock,
-    percent,
-    totalOrder,
-    items,
-  };
-}
-
 export default function BasicTable() {
   const classes = useStyles();
   const [proformaItem, setProformaItem] = useState([]);
